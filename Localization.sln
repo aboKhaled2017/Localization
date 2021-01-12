@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localization.csproj", "{7709A018-8225-4D76-8A78-5F59310FCD7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7709A018-8225-4D76-8A78-5F59310FCD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7709A018-8225-4D76-8A78-5F59310FCD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7709A018-8225-4D76-8A78-5F59310FCD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7709A018-8225-4D76-8A78-5F59310FCD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75EB0BBE-EC13-43DE-8E8F-A9E2CD6BEA25}
+	EndGlobalSection
+EndGlobal

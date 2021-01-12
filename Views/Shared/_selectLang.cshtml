@@ -1,0 +1,28 @@
+﻿@using System.Globalization
+
+<div class="row p-lg-2 m-lg-2">
+    @if (CultureInfo.CurrentCulture.Name.Equals("en-US"))
+    {
+        <form id="selectLang"
+              asp-route-returnUrl="@Context.Request.Path"
+              asp-route-culture="ar-EG"
+              asp-controller="Home"
+              asp-action="selectLang">
+            <button class="btn btn-primary" type="submit">
+                عربى
+            </button>
+        </form>
+    }
+    else
+    {
+        <form id="selectLang"
+              asp-route-returnUrl="@Context.Request.Path"
+              asp-route-culture="en-US"
+              asp-controller="Home"
+              asp-action="selectLang">
+            <button class="btn btn-primary" type="submit">
+                English
+            </button>
+        </form>
+    }
+</div>

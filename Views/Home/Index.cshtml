@@ -1,0 +1,12 @@
+﻿@using System.Globalization
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        current culture: @CultureInfo.CurrentCulture.Name
+    </h1>
+    <h2>a: @localizer["welcom"]</h2>
+    <p>@localizer["learnAbout"] <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
