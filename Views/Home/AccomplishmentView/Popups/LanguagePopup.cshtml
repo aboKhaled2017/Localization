@@ -1,0 +1,84 @@
+﻿
+<div class="modal fade" id="profileLanguagePopupModal" data-backdrop="static"
+     data-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel"
+     aria-hidden="true">    
+    <div class="modal-dialog modal-lg artdeco-modal">
+        <div class="modal-content position-relative overflow-hidden">
+            <div class="dialog-overlay position-absolute d-none">
+                <div class="spinner-grow text-info" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="modal-header">
+                <h2 class="modal-title" id="staticBackdropLabel">Add language</h2>
+
+                <button data-test-modal-close-btn="" aria-label="Close" id="ember132"
+                        data-dismiss="modal"
+                        type="button"
+                        class="artdeco-modal__dismiss artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--2 artdeco-button--tertiary ember-view">
+                    <li-icon aria-hidden="true" type="cancel-icon" class="artdeco-button__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                            <path d="M13.42 12L20 18.58 18.58 20 12 13.42 5.42 20 4 18.58 10.58 12 4 5.42 5.42 4 12 10.58 18.58 4 20 5.42z"></path>
+                        </svg>
+                    </li-icon>
+
+                    <span class="artdeco-button__text">
+
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" id="profileLanguagePopupModalForm">
+                    <div class="form-row">
+                        <label class="form-label">Language <span class="required">*</span></label>
+                        <input class="form-control" list="languages" name="languageName" />
+                        <datalist id="languages">
+                            <option value="english">English</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="chinse">Chinse</option>
+                        </datalist>
+                        <div class="form-error d-none" id="languageNameError">
+                            <span>erro here</span>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <label class="form-label">Proficiency</label>
+                        <select class="form-control" name="languageProficiency">
+                            <option value="">
+                                Please select
+                            </option>
+                            <option value="Elementary proficiency">
+                                Elementary proficiency
+                            </option>
+                            <option value="Limited working proficiency">
+                                Limited working proficiency
+                            </option>
+                            <option value="Full professional proficiency">
+                                Full professional proficiency
+                            </option>
+                            <option value="Professional working proficiency">
+                                Professional working proficiency
+                            </option>
+                            <option value="Native or bilingual proficiency">
+                                Native or bilingual proficiency
+                            </option>
+                        </select>
+
+                        <div class="form-error d-none" id="languageProficiencyError">
+                            <span>erro here</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="m-footer">
+                <div id="ember150" class="artdeco-modal__actionbar display-flex justify-space-between flex-row-reverse py-2 ember-view">
+                    <button class="artdeco-button modal-saveBtn" type="button" id="languageSaveBtn">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

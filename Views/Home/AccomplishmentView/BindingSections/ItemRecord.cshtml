@@ -1,0 +1,49 @@
+﻿@model (string dataType,string subject,int recordsCount)
+@{ 
+    var tempData = new List<(string itemName, string dateStr, string desc)>
+    {
+        ("Atlob Dent", "Mar 2019 – Present","A website for phramacies and stocks"),
+        ("Zor Doctor", "June 2018 – Present","A website for a medical company that make shopping on dentistry medical tools"),
+        ("Online Courses", "Mar 2017 – Present","A website for a medical company that make shopping on dentistry medical tools"),
+    }.Take(Model.recordsCount).ToList();
+}
+<hr class="full-hr" />
+<div class="row accomp-record" data-title="@Model.dataType">
+    <div class="d-flex flex-row leftPart col-11 overflow-hidden">
+        <div class="number">
+            @Model.recordsCount
+        </div>
+        <div class="flex-grow-1 d-block ml-3">
+            <div class="accomp-record-title">@Model.subject</div>
+            <div class="desc-short">
+                <div class="text-nowrap ">
+                    @for(byte i=0;i<tempData.Count;i++)
+                    {
+                        <span>@tempData[i].itemName</span>
+                        if (i != tempData.Count - 1)
+                        {
+                            <span><i class="fa fa-circle fa-xs text-dark"></i></span>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="desc-details">
+                <ul class="list-unstyled">
+                    @for (byte i = 0; i < tempData.Count; i++)
+                    {
+                    <li data-record="@tempData[i].itemName">
+                        @if (i != 0)
+                        {
+                            <hr class="w-100" />
+                        }
+                        @await Html.PartialAsync("AccomplishmentView/BindingSections/SubItemRecord", tempData[i])
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rightPart col-1 text-center">
+        <i class="arrowDown fa fa-angle-down"></i>
+    </div>
+</div>

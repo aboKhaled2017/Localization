@@ -3,10 +3,46 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">
-        current culture: @CultureInfo.CurrentCulture.Name
-    </h1>
-    <h2>a: @localizer["welcom"]</h2>
-    <p>@localizer["learnAbout"] <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="Container p-2">
+    <div class="row">
+        <div class="col-9">
+            <div class="container-fluid">
+                <div class="row p-2">
+                    <partial name="AccomplishmentView/Popups/Main" />
+                    <partial name="AccomplishmentView/BindingSections/Main" />
+                </div>
+                <div class="row">
+                    <hr style="width:100%" />
+                </div>
+                <div class="row p-2" style="background:#808080">
+                    <p>Secion <h2 style="color:red">Section TWO</h2> here</p>
+                    
+                </div>
+                <div class="row">
+                    <hr style="width:100%" />
+                </div>
+                <div class="row p-2" style="background:#808080">
+                    <p>Secion <h2 style="color:red">Three</h2> here</p>
+                </div>
+                <div class="row">
+                    <hr style="width:100%" />
+                </div>
+                <div class="row p-2" style="background:#808080">
+                    <p>Secion <h2 style="color:red">Four</h2> here</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            Right Asid here
+        </div>
+    </div>
 </div>
+@section Scripts{
+    <script src="~/js/HProfile/Accomplishment.js"></script>
+}
+@section Styles{
+    <link href="~/css/HProfile/Accomplishment/main.css" rel="stylesheet" />
+    <link href="~/css/HProfile/Accomplishment/ProjectPopup.css" rel="stylesheet" />
+    <link href="~/css/HProfile/Accomplishment/CoursePopup.css" rel="stylesheet" />
+    <link href="~/css/HProfile/HomePage/AccoplishmentSection.css" rel="stylesheet" />
+}

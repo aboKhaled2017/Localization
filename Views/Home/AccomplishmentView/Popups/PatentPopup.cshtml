@@ -1,0 +1,164 @@
+﻿@{
+    var months = Html.Months();
+    var years = Html.YearsFromNow(25);
+}
+<div class="modal fade" id="profilePatentPopupModal" data-backdrop="static"
+     data-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg artdeco-modal">
+        <div class="modal-content position-relative overflow-hidden">
+            <div class="dialog-overlay position-absolute d-none">
+                <div class="spinner-grow text-info" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="modal-header">
+                <h2 class="modal-title" id="staticBackdropLabel">Add Patent</h2>
+
+                <button data-test-modal-close-btn="" aria-label="Close" id="ember132"
+                        data-dismiss="modal"
+                        type="button"
+                        class="artdeco-modal__dismiss artdeco-button artdeco-button--circle artdeco-button--muted artdeco-button--2 artdeco-button--tertiary ember-view">
+                    <li-icon aria-hidden="true" type="cancel-icon" class="artdeco-button__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                            <path d="M13.42 12L20 18.58 18.58 20 12 13.42 5.42 20 4 18.58 10.58 12 4 5.42 5.42 4 12 10.58 18.58 4 20 5.42z"></path>
+                        </svg>
+                    </li-icon>
+
+                    <span class="artdeco-button__text">
+
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-container">
+                    <form class="modal-form px-2">
+                        <div class="form-row">
+                            <label class="form-label">Patent Title <span class="required">*</span></label>
+                            <input class="form-control" />
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <label class="form-label">Patent Office <span class="required">*</span></label>
+                            <input class="form-control" />
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <label class="form-label">Patent Or Application Number <span class="required">*</span></label>
+                            <input class="form-control" />
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 form-row form-creator">
+                            <div class="d-flex flex-column">
+                                <div class="form-label">
+                                    Inventor
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="p-2">
+                                        <img class="border-dark" src="\favicon.ico" />
+                                    </div>
+                                    <div class="p-2 creator-name">
+                                        <label>Mohamed khaled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block w-100">
+                                <hr class="creator-hr my-2" />
+                            </div>
+                            <div class="d-flex justify-content-end w-100">
+                                <a class="btn-link btn-sm addCreatorBtn p-0 mr-2 text-primary">
+                                    Add Inventor
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-3 form-row d-flex flex-column">
+                            <label class="form-label">Status</label>
+                            <div class="ml-2">
+                                <label class="form-label">
+                                    <input type="radio" class="option-input radio" name="example" checked />
+                                    Patent Issued
+                                </label>
+                                <label class="form-label ml-3">
+                                    <input type="radio" class="option-input radio" name="example" />
+                                    Patent Pending
+                                </label>
+                            </div>
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="form-row flex-column mt-3">
+                            <label class="form-label">Issue Date</label>
+                            <div class="d-flex flex-row justify-content-start">
+                                <div>
+                                    <select class="form-control-sm">
+                                        <option value="">
+                                            Month
+                                        </option>
+                                        @for (int i = 0; i < months.Length; i++)
+                                        {
+                                            <option value="@(i+1)">@months[i]</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="mx-1">
+                                    <select class="form-control-sm">
+                                        <option value="">
+                                            Day
+                                        </option>
+                                        @for (int i = 1; i <= 31; i++)
+                                        {
+                                            <option value="@i">@i</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-control-sm">
+                                        <option value="">
+                                            Year
+                                        </option>
+                                        @for (int i = 0; i < years.Length; i++)
+                                        {
+                                            <option value="@years[i]">@years[i]</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <label class="form-label">Patent URL</label>
+                            <input class="form-control" />
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                            <div class="form-error d-none">
+                                <span>erro here</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="m-footer">
+                <div id="ember150" class="artdeco-modal__actionbar display-flex justify-space-between flex-row-reverse py-2 ember-view">
+                    <button class="artdeco-button modal-saveBtn" type="button">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

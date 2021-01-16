@@ -1,0 +1,108 @@
+﻿#AccomplishmentSection {
+    border: 1px solid #dee2e6;
+    border-radius:10px;
+}
+    #AccomplishmentSection .label-title {
+        font-size: 20px;
+        line-height: 1.4;
+        color: rgba(0,0,0,.9);
+        font-weight: 400;
+    }
+
+    #AccomplishmentSection .plus-icon {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        padding: 3px;
+        cursor: pointer;
+        transition: background .3s ease-in;
+        border-radius: 50%;
+    }
+    #AccomplishmentSection .plus-icon:hover {
+        background-color: #eeeeee91;       
+    }
+        .plus-icon svg[data-supported-dps='24x24'] {
+            width: 30px;
+            height: 30px;
+            color: #6c757d;
+        }
+        .plus-icon svg[data-supported-dps='24x24'] :hover{
+            
+        }
+#AccomplishmentSection .accomp-records {
+
+}
+    #AccomplishmentSection .accomp-records .accomp-record {
+        margin-left: 5px;
+    }
+#AccomplishmentSection .accomp-hr {
+    margin-right: -31px;
+    margin-left: 53px;
+    margin-top: 5px;
+}
+#AccomplishmentSection .accomp-records .accomp-record .number {
+    color: #007bff;
+    font-size: 35px;
+    line-height: 32px;
+}
+#AccomplishmentSection .accomp-records .accomp-record .accomp-record-title {
+    color: #007bff;
+    font-size: 15px;
+    font-weight: 600;
+}
+#AccomplishmentSection .accomp-records .accomp-record .leftPart {
+    width: 90%;
+}
+#AccomplishmentSection .accomp-records .accomp-record .rightPart {
+     
+}
+    #AccomplishmentSection .accomp-records .accomp-record .rightPart .arrowDown {
+        font-size: 26px;
+        width: 35px;
+        height: 35px;
+        line-height: 26px;
+        color: #6c757d;
+        cursor: pointer;
+        padding: 5px;
+        transition: background .3s ease-in;
+        border-radius: 50%;
+    }
+        #AccomplishmentSection .accomp-records .accomp-record .rightPart .arrowDown:hover {
+            color: #1780de;
+            background-color: #eeeeee91;
+        }
+#AccomplishmentSection .accomp-records .accomp-record .desc-short {
+}
+#AccomplishmentSection .accomp-records .accomp-record .desc-details {
+    display:none;
+}
+.full-hr {
+    width: 110%;
+    margin-left: -40px;
+    display:none;
+}
+
+#AccomplishmentSection .accomp-records .accomp-record .sub-item-date {
+    color:#6c757d;
+}
+#AccomplishmentSection .btn-icon {
+    position: relative;
+}
+    #AccomplishmentSection .btn-icon .accomp-menue {
+        position: absolute;
+        bottom: -235px;
+        right: 0;
+        padding: 5px;
+        z-index: 2;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 0px 2px 4px #888, 0px 7px 2px #666;
+    }
+    #AccomplishmentSection .btn-icon .accomp-menue-btn {
+        background: 3px;
+        width: 100%;
+        padding: 3px 10px;
+    }
+        #AccomplishmentSection .btn-icon .accomp-menue-btn:hover {
+            background: #eeeeee85;
+        }

@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Localization</title>
 
-    @if (localizer["dir"].Equals("ltr"))
+    @if (localizer["dir"].Value == "ltr")
     {
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     }
     else
     {
-    <link rel="stylesheet"
-      href="https://cdn.rtlcss.com/bootstrap/v4.4.1/css/bootstrap.min.css"
-      integrity="sha384-yQ02IR5BzpO2LZ70lJP2g4opr8tX6KzCmaELFzmNqlwtvTgtDJHQvuc43zCRMf1T"
-      crossorigin="anonymous" />
+        <link rel="stylesheet"
+              href="https://cdn.rtlcss.com/bootstrap/v4.4.1/css/bootstrap.min.css"
+              integrity="sha384-yQ02IR5BzpO2LZ70lJP2g4opr8tX6KzCmaELFzmNqlwtvTgtDJHQvuc43zCRMf1T"
+              crossorigin="anonymous" />
     }
-    <link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    @RenderSection("Styles", false);
 </head>
 <body dir="@localizer["dir"]">
     <header>
@@ -55,7 +57,7 @@
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @if (localizer["rtl"].Equals("ltr"))
+    @if (localizer["dir"].Value=="ltr")
     {
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     }

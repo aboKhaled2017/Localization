@@ -1,0 +1,22 @@
+﻿.modal-form .form-creator img {
+    width: 43px;
+    display: block;
+    border-radius: 50%;
+}
+.modal-form .form-creator .creator-name label {
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    vertical-align: sub;
+}
+.modal-form .form-creator .creator-hr {
+    margin: auto;
+    box-shadow: 0px 1px 2px #6666664f;
+}
+.form-creator .addCreatorBtn {
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+}

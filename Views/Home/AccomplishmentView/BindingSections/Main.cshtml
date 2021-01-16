@@ -1,0 +1,53 @@
+﻿@{ 
+    var data = new List<object> {
+       new{
+            title = "Projects",
+            items = new List<object>
+            {
+                new {name="Atlob Dent",date="02 2021",desc="blabla bla bla bla bla"},
+                new {name="Zor Doctor",date="01 2020",desc="blabla bla bla bla bla"},
+                new {name="Graduation Project",date="12 2012",desc="blabla bla bla bla bla"},
+                new {name="Online Courses",date="10 2018",desc="blabla bla bla bla bla"}
+            }
+        },
+       new{
+            title = "Languages",
+            items = new List<object>
+            {
+                new {name="Arabic",desc="Native or biligual"},
+                new {name="English",desc="Biggner"},
+            }
+        }
+    };
+}
+<div id="AccomplishmentSection" class="w-100 p-3 bg-white d-flex flex-column mt-2">
+    <div class="d-flex flex-row">
+        <label class="label-title flex-grow-1">Accomplishment</label>
+        <div class="btn-icon">
+            <i id="addNewAccompBtn" type="plus-icon" class="plus-icon" size="large" role="img" aria-label="Add accomplishment">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+                    <path d="M21 13h-8v8h-2v-8H3v-2h8V3h2v8h8z"></path>
+                </svg>
+            </i>
+            <div class="accomp-menue bg-light">
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profileProjectPopupModal">Project</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profileCoursePopupModal">Course</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profilePatentPopupModal">Patent</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profileOrgPopupModal">Organization</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profileLanguagePopupModal">Language</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm" data-toggle="modal" data-target="#profilePublicationPopupModal">Publication</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm text-nowrap" data-toggle="modal" data-target="#profileHAWPopupModal">Honor and Award</button>
+                <button class="accomp-menue-btn btn text-dark btn-sm text-nowrap" data-toggle="modal" data-target="#profileTestScorePopupModal">Test And Score</button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 container accomp-records pl-4">
+        @await Html.PartialAsync("AccomplishmentView/BindingSections/ItemRecord", ("project","Projects", 5))
+        <div class="w-100">
+            <hr class="accomp-hr" />
+        </div>
+        @await Html.PartialAsync("AccomplishmentView/BindingSections/ItemRecord", ("language","Languages",1))
+    </div>
+</div>
+
+
