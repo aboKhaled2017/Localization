@@ -106,3 +106,8 @@
         #AccomplishmentSection .btn-icon .accomp-menue-btn:hover {
             background: #eeeeee85;
         }
+.date-container {
+    padding:0;
+    margin-right: -5px;
+    margin-left: -5px;
+}

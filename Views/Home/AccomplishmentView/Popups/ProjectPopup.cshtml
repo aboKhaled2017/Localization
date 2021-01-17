@@ -33,34 +33,34 @@
             </div>
             <div class="modal-body">
                 <div class="modal-body-container">
-                    <form class="modal-form px-2">
+                    <form class="modal-form px-2" id="profileProjectPopupModalForm">
                         <div class="form-row">
                             <label class="form-label">Project Name <span class="required">*</span></label>
-                            <input class="form-control" />
-                            <div class="form-error d-none">
+                            <input class="form-control" name="projectName"/>
+                            <div class="form-error d-none" id="projectNameError">
                                 <span>erro here</span>
                             </div>
                         </div>
                         <div class="form-row mt-2">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label ml-3 text-dark" for="gridCheck1">
+                                <input class="form-check-input" type="checkbox" id="isCurrentlyWorkOnProject">
+                                <label class="form-check-label ml-3 text-dark" for="isCurrentlyWorkOnProject">
                                     I am currently working on this project
                                 </label>
                             </div>
                         </div>
-                        <div class="mt-3 form-row d-flex flex-column">
-                            <div class="d-flex flex-row">
-                                <div class="flex-grow-1 mr-1">
+                        <div class="mt-3 container date-container">
+                            <div class="row">
+                                <div class="col-6">
                                     <label class="form-label"> Start Date</label>
                                 </div>
-                                <div class="flex-grow-1 ml-1">
-                                    <label class="form-label"> End Date</label>
+                                <div class="col-6">
+                                    <label class="form-label" id="projectEndDateLabel"> End Date</label>
                                 </div>
                             </div>
-                            <div class="d-flex flex-row mt-1">
-                                <div class="flex-grow-1 mr-1">
-                                    <select class="form-control">
+                            <div class="row mt-1">
+                                <div class="col-6">
+                                    <select class="form-control" name="projectStartMonth">
                                         <option value="">Month</option>
                                         @for (int i = 0; i < months.Length; i++)
                                         {
@@ -68,8 +68,9 @@
                                         }
                                     </select>
                                 </div>
-                                <div class="flex-grow-1 ml-1">
-                                    <select class="form-control">
+                                <div class="col-6">
+                                    <select class="form-control" name="projectEndMonth">
+                                        <option value="">Month</option>
                                         @for (int i = 0; i < months.Length; i++)
                                         {
                                             <option value="@(i+1)">@months[i]</option>
@@ -77,9 +78,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="d-flex flex-row mt-2">
-                                <div class="flex-grow-1 mr-1">
-                                    <select class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <select class="form-control" name="projectStartYear">
                                         <option value="">Year</option>
                                         @foreach (var year in years)
                                         {
@@ -87,8 +88,8 @@
                                         }
                                     </select>
                                 </div>
-                                <div class="flex-grow-1 ml-1">
-                                    <select class="form-control">
+                                <div class="col-6">
+                                    <select class="form-control" name="projectEndYear">
                                         <option value="">Year</option>
                                         @foreach (var year in years)
                                         {
@@ -96,6 +97,9 @@
                                         }
                                     </select>
                                 </div>
+                            </div>
+                            <div class="form-error d-none" id="projectDateError">
+                                <span>erro here</span>
                             </div>
                         </div>
                         <div class="mt-4 row form-creator">
@@ -123,8 +127,8 @@
                         </div>
                         <div class="form-row mt-3">
                             <label class="form-label">Associated With</label>
-                            <select class="form-control">
-                                <option value="Please select">
+                            <select class="form-control" name="projectAssociatedWith">
+                                <option value="">
                                     -
                                 </option>
                                 <option value="Elementary proficiency">
@@ -143,22 +147,21 @@
                                     Native or bilingual proficiency
                                 </option>
                             </select>
-                            </select>
-                            <div class="form-error d-none">
+                            <div class="form-error d-none" id="projectAssociatedWithError">
                                 <span>erro here</span>
                             </div>
                         </div>
                         <div class="form-row mt-3">
                             <label class="form-label">Project URL</label>
-                            <input class="form-control" />
-                            <div class="form-error d-none">
+                            <input class="form-control" name="projectUrl"/>
+                            <div class="form-error d-none" id="projectUrlError">
                                 <span>erro here</span>
                             </div>
                         </div>
                         <div class="form-row mt-3">
                             <label class="form-label">Description</label>
-                            <textarea class="form-control" rows="4"></textarea>
-                            <div class="form-error d-none">
+                            <textarea class="form-control" rows="4" name="projectDesc"></textarea>
+                            <div class="form-error d-none" id="projectDescError">
                                 <span>erro here</span>
                             </div>
                         </div>
@@ -167,7 +170,7 @@
             </div>
             <div class="m-footer">
                 <div id="ember150" class="artdeco-modal__actionbar display-flex justify-space-between flex-row-reverse py-2 ember-view">
-                    <button class="artdeco-button modal-saveBtn" type="button">
+                    <button class="artdeco-button modal-saveBtn" type="button" id="projectSaveBtn">
                         Save
                     </button>
                 </div>

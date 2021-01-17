@@ -29,24 +29,24 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="modal-form">
+                <form class="modal-form" id="profileCoursePopupModalForm">
                     <div class="form-row">
                         <label class="form-label">Course Name <span class="required">*</span></label>
-                        <input class="form-control" />
-                        <div class="form-error d-none">
+                        <input class="form-control" name="courseName"/>
+                        <div class="form-error d-none" id="courseNameError">
                             <span>erro here</span>
                         </div>
                     </div>
                     <div class="form-row mt-3">
                         <label class="form-label">Number</label>
-                        <input class="form-control" />
-                        <div class="form-error d-none">
+                        <input class="form-control" name="courseNumber"/>
+                        <div class="form-error d-none" id="courseNumberError">
                             <span>erro here</span>
                         </div>
                     </div>
                     <div class="form-row mt-3">
                         <label class="form-label">Proficiency</label>
-                        <select class="form-control">
+                        <select class="form-control" name="courseProficiency">
                             <option value="Please select">
                                 Please select
                             </option>
@@ -66,8 +66,8 @@
                                 Native or bilingual proficiency
                             </option>
                         </select>
-                        </select>
-                        <div class="form-error d-none">
+
+                        <div class="form-error d-none" id="courseProficiencyError">
                             <span>erro here</span>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
             </div>
             <div class="m-footer">
                 <div id="ember150" class="artdeco-modal__actionbar display-flex justify-space-between flex-row-reverse py-2 ember-view">
-                    <button class="artdeco-button modal-saveBtn" type="button">
+                    <button class="artdeco-button modal-saveBtn" type="button" id="courseSaveBtn">
                         Save
                     </button>
                 </div>
