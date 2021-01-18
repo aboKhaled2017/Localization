@@ -32,7 +32,7 @@
                 <form class="modal-form" id="profileLanguagePopupModalForm">
                     <div class="form-row">
                         <label class="form-label">Language <span class="required">*</span></label>
-                        <input class="form-control" list="languages" name="languageName" />
+                        <input class="form-control" list="languages" name="languageName" bind-to="name"/>
                         <datalist id="languages">
                             <option value="english">English</option>
                             <option value="arabic">Arabic</option>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="form-row mt-3">
                         <label class="form-label">Proficiency</label>
-                        <select class="form-control" name="languageProficiency">
+                        <select class="form-control" name="languageProficiency" bind-to="prof">
                             <option value="">
                                 Please select
                             </option>

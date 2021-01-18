@@ -36,14 +36,14 @@
                     <form class="modal-form px-2" id="profileProjectPopupModalForm">
                         <div class="form-row">
                             <label class="form-label">Project Name <span class="required">*</span></label>
-                            <input class="form-control" name="projectName"/>
+                            <input class="form-control" name="projectName" bind-to="name"/>
                             <div class="form-error d-none" id="projectNameError">
                                 <span>erro here</span>
                             </div>
                         </div>
                         <div class="form-row mt-2">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="isCurrentlyWorkOnProject">
+                                <input class="form-check-input" type="checkbox" id="isCurrentlyWorkOnProject" bind-to="status">
                                 <label class="form-check-label ml-3 text-dark" for="isCurrentlyWorkOnProject">
                                     I am currently working on this project
                                 </label>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="row mt-1">
                                 <div class="col-6">
-                                    <select class="form-control" name="projectStartMonth">
+                                    <select class="form-control" name="projectStartMonth" bind-to="startMonth">
                                         <option value="">Month</option>
                                         @for (int i = 0; i < months.Length; i++)
                                         {
@@ -69,7 +69,7 @@
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <select class="form-control" name="projectEndMonth">
+                                    <select class="form-control" name="projectEndMonth" bind-to="endMonth">
                                         <option value="">Month</option>
                                         @for (int i = 0; i < months.Length; i++)
                                         {
@@ -160,7 +160,7 @@
                         </div>
                         <div class="form-row mt-3">
                             <label class="form-label">Description</label>
-                            <textarea class="form-control" rows="4" name="projectDesc"></textarea>
+                            <textarea class="form-control" rows="4" name="projectDesc" bind-to="desc"></textarea>
                             <div class="form-error d-none" id="projectDescError">
                                 <span>erro here</span>
                             </div>
